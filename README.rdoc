@@ -23,4 +23,5 @@ This online Store Application and it developed using Ruby.
 ==Limitation
 * this only implement online order taking process.there is no admin view(to see orders)
 * paymnet process is pendding implementation
+* product category should be separare model but at this stage I keep it in product model(to minimize complexcity in CSV import process )
 <tt>rake doc:app</tt>.
