@@ -13,7 +13,7 @@ This online Store Application and it developed using Ruby.
     4.Ruby CSV plugin for upload product list to database
 
 == Basic application flow
-* user can see his product list one's enter the site and if he want to get new product list , he can upload clicking  upload product     list button(csv file only).
+* user can see his product list one's enter the site and if he want to get new product list then  he can import latest product list just   clicking  import products button.
   
 * As next step, he can search within product list using category and product name(one or both).
   User can see product information(price, name, category , id) and he can add his product into cart.
