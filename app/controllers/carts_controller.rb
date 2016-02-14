@@ -8,6 +8,7 @@ class CartsController < ApplicationController
           current_order.update_attribute(:customername, params[:customername])
           current_order.update_attribute(:customeremail, params[:customeremail])
           current_order.update_attribute(:customershpadd, params[:customershipadd])
+          current_order.save
           session[:order_id] = nil
           redirect_to products_path
         elsif
