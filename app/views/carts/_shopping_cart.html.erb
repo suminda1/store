@@ -18,7 +18,24 @@
 <% end %>
 
 <%= form_tag(cart_path, :method => "get", id: "buycart-form") do %>
- <%= hidden_field_tag 'complete', 'yes' %>
- <%= submit_tag "Buy",:confirm=> "Do you want to buy ?", :class=> "btn btn-primary" %>
+  <table>
+  <tr>
+    <td><%= label_tag :Name %></td>
+    <td><%= text_field_tag 'customername', params[:customername], placeholder: "Name", :required => true %></td>
+  </tr>
+  <tr>
+    <td><%= label_tag :Email %></td>
+    <td><%= email_field_tag 'customeremail', params[:customeremail],placeholder: "Email", :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}'  %></td>
+  </tr>
+  <tr>
+    <td><%= label_tag :"Shipping Address" %></td>
+    <td> <%= text_area_tag 'customershipadd', params[:customershipadd], placeholder: "Shiping address", :required => true,  :rows => 3  %></td>
+  </tr>
+  <tr>
+    <td><%= hidden_field_tag 'complete', 'yes' %></td>
+    <td><%= submit_tag "Check Out", :onclick => "return confirm('Do you want to Check Out ?');",:confirm=> "sure?", :class=> "btn btn-primary" %></td>
+  </tr>
+  </table>
+  <%= link_to "go back", root_path %> 
 <% end %>
 
