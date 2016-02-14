@@ -1,28 +1,25 @@
-== README
+== Online Store 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This online Store Application and it developed using Ruby.
 
 * Ruby version 2.1.5p273
 
-* System dependencies
+* Database - SqlLite
 
-* Configuration
+* Other used libraries
+    1.bootstrap 3.20
+    2.Jquery
+    3.will_paginate plugin for product list(page size is 5)
+    4.Ruby CSV plugin for upload product list to database
 
-* Database creation
+== Basic application flow
+  * user can see his product list one's enter the site and if he want to get new product list , he can upload using upload product list  upload button.
+  
+ *As next step, he can search within product list using category and product name(one or both).
+  user can see product information(price, name, category , id) and he can add his product into cart.
+ 
+ *As next step, he can view his cart and he can update/delete/Check out cart.
+ NOTE:payment process is not implement
+   
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
