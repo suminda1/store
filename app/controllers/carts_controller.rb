@@ -10,8 +10,10 @@ class CartsController < ApplicationController
           current_order.update_attribute(:customershpadd, params[:customershipadd])
           current_order.save
           session[:order_id] = nil
+          flash[:success] = "your cart ordered" 
           redirect_to products_path
         elsif
+           flash[:success] = "There are no items in your shopping cart." 
           redirect_to cart_path
         end
      end
