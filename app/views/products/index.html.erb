@@ -1,17 +1,22 @@
 <h3 class="text-center">Products for Online Sales</h3>
-<%= form_tag(products_path, :method => "get", id: "searchproduct-form") do %>
- <h4>Category</h4><br>
- <%= select_tag :product_searchcategory, options_for_select(@categoryall.collect{ |u| [u.category] }.uniq), :include_blank => true %>
-  <%= hidden_field_tag :searchcategory, params[:searchcategory] %>
- <h4>Product</h4><br>
- <%= text_field_tag :searchname, params[:searchname], placeholder: "Search Products" %>
- <%= submit_tag "Search", :class=> "btn btn-primary" %>
-<% end %>
-
-<%= form_tag products_import_path, multipart: true do %>
-  <%= file_field_tag :file,:accept => "csv", :class=> "btn btn-primary" %>
-  <%= submit_tag "Import CSV", :class=> "btn btn-primary" %>
-<% end %>
+<div class="row">
+  <%= form_tag products_import_path, multipart: true do %>
+    <h4>Upload Products</h4><br>
+     <%= file_field_tag :file,:accept => "csv", :class=> "btn btn-primary" %>
+     <%= submit_tag "Import CSV", :class=> "btn btn-primary" %>
+  <% end %>
+</div>
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+  <%= form_tag(products_path, :method => "get", id: "searchproduct-form") do %>
+   <h4>Category</h4><br>
+     <%= select_tag :product_searchcategory, options_for_select(@categoryall.collect{ |u| [u.category] }.uniq), :include_blank => true %>
+     <%= hidden_field_tag :searchcategory, params[:searchcategory] %>
+    <%= text_field_tag :searchname, params[:searchname], placeholder: "Search Products" %>
+    <%= submit_tag "Search", :class=> "btn btn-primary" %>
+  <% end %>
+  </div>
+</div>
 
 <div class="row">
   <div class="col-xs-6 col-xs-offset-3">
@@ -20,5 +25,9 @@
     <% end %>
  
   </div>
-     <%= will_paginate @products %>
+</div>
+<div class="row">
+   <div class="col-xs-6 col-xs-offset-3">
+    <%= will_paginate @products %>
+   </div>
 </div>
