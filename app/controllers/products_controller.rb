@@ -29,7 +29,9 @@ class ProductsController < ApplicationController
             Product.create! productid: row[0], category: row[1], name: row[2], price: row[3]
          end
       end
+       flash[:success] = "Product List Upload Process completed"      
        redirect_to products_path
+
   
    end
   
