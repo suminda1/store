@@ -16,7 +16,7 @@ This online Store Application and it developed using Ruby.
 * user can see his product list one's enter the site and if he want to get new product list , he can upload clicking  upload product     list button(csv file only).
   
 * As next step, he can search within product list using category and product name(one or both).
-   user can see product information(price, name, category , id) and he can add his product into cart.
+  User can see product information(price, name, category , id) and he can add his product into cart.
  
 * As next step, he can view his cart and he can update/delete/Check out cart.
   NOTE:payment process is not implement
