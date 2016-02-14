@@ -22,4 +22,5 @@ This online Store Application and it developed using Ruby.
   NOTE:payment process is not implement
 ==Limitation
 * this only implement online order taking process.there is no admin view(to see orders)
+* paymnet process is pendding implementation
 <tt>rake doc:app</tt>.
