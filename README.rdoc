@@ -20,5 +20,6 @@ This online Store Application and it developed using Ruby.
  
 * As next step, he can view his cart and he can update/delete/Check out cart.
   NOTE:payment process is not implement
-
+==Limitation
+* this only implement online order taking process.there is no admin view(to see orders)
 <tt>rake doc:app</tt>.
