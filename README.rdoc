@@ -10,7 +10,7 @@ This online Store Application and it developed using Ruby.
     1.bootstrap 3.20
     2.Jquery
     3.will_paginate plugin for product list(page size is 5)
-    4.Ruby CSV plugin for upload product list to database
+    4.Ruby CSV/open_url plugin for upload product list to database
 
 == Basic application flow
 * user can see his product list one's enter the site and if he want to get new product list then  he can import latest product list just   clicking  import products button(make sure update latest SSL certifcates in your computer).
