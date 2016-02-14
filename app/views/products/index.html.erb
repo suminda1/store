@@ -1,9 +1,8 @@
 <h3 class="text-center">Products for Online Sales</h3>
 <div class="row">
   <%= form_tag products_import_path, multipart: true do %>
-    <h4>Upload Products</h4><br>
-     <%= file_field_tag :file,:accept => "csv", :class=> "btn btn-primary" %>
-     <%= submit_tag "Import CSV", :class=> "btn btn-primary" %>
+    <h5>Update Latest Product List('https://dl.dropboxusercontent.com/u/6582068/products.csv')</h5><br>
+        <%= submit_tag "Import Products", :class=> "btn btn-primary" %>
   <% end %>
 </div>
 <div class="row">
